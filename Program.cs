@@ -1,10 +1,28 @@
-﻿// See https://aka.ms/new-console-template for more information
-//Console.WriteLine("Hello, World!");
+﻿string[] names = { "Bob", "Conrad", "Grant" };
+foreach (string name in names)
+{
+    Console.WriteLine(name);
+}
+Console.WriteLine("\n");
 
-string projectName = "ACME";
-string englishLocation = $@"c:\Exercise\{projectName}\data.txt";
-Console.WriteLine($"View English output:\n\t\t{englishLocation}\n");
 
-string russianMessage = "\u041f\u043e\u0441\u043c\u043e\u0442\u0440\u0435\u0442\u044c \u0440\u0443\u0441\u0441\u043a\u0438\u0439 \u0432\u044b\u0432\u043e\u0434";
-string russianLocation = $@"c:\Exercise\{projectName}\ru-RU\data.txt";
-Console.WriteLine($"{russianMessage}:\n\t\t{russianLocation}\n");
+int[] inventory = { 200, 450, 700, 175, 250 };
+int sum = 0;
+foreach (int items in inventory)
+{
+    sum += items;
+}
+
+Console.WriteLine($"We have {sum} items in inventory.\n\n");
+
+
+//challenge
+string[] orderIDs = { "B123", "C234", "A345", "C15", "B177", "G3003", "C235", "B179" };
+
+foreach (string orderID in orderIDs)
+{
+    if (orderID.StartsWith("B"))
+    {
+        Console.WriteLine(orderID);
+    }
+}
